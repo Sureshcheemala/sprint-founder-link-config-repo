@@ -33,7 +33,7 @@ spring:
   mail:
     host: smtp.gmail.com
     port: 587
-    username: chnvss@gmail.com
+    username: chnvss.719@gmail.com
     password: feqv matx xlkd ahmu
     from: chnvss.719@gmail.com
     properties:
