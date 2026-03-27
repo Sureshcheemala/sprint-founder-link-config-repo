@@ -21,6 +21,9 @@ spring:
     compatibility-verifier:
       enabled: false
 
+    gateway:
+      url: http://172.21.232.11:8085
+
 eureka:
   client:
     service-url:
