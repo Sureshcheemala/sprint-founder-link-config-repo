@@ -6,35 +6,6 @@ spring:
       server:
         webflux:
           routes:
-            - id: auth-service-auth
-              uri: lb://AUTH-SERVICE
-              predicates:
-                - Path=/auth/**
-            - id: auth-service-test
-              uri: lb://AUTH-SERVICE
-              predicates:
-                - Path=/test/**
-            - id: user-service
-              uri: lb://USER-SERVICE
-              predicates:
-                - Path=/users/**
-            - id: startup-service
-              uri: lb://STARTUP-SERVICE
-              predicates:
-               - Path=/startups/**
-            - id: investment-service
-              uri: lb://INVESTMENT-SERVICE
-              predicates:
-                - Path=/investments/**
-            - id: team-service
-              uri: lb://TEAM-SERVICE
-              predicates:
-                - Path=/teams/**
-            - id: notification-service
-              uri: lb://NOTIFICATION-SERVICE
-              predicates:
-                - Path=/notifications/**
-
           #--------swagger------------
             - id: auth-docs
               uri: lb://AUTH-SERVICE
@@ -82,6 +53,36 @@ spring:
                 - Path=/notifications/v3/api-docs/**
               filters:
                 - RewritePath=/notifications/(?<segment>.*), /${segment}
+            
+
+            - id: auth-service-auth
+              uri: lb://AUTH-SERVICE
+              predicates:
+                - Path=/auth/**
+            - id: auth-service-test
+              uri: lb://AUTH-SERVICE
+              predicates:
+                - Path=/test/**
+            - id: user-service
+              uri: lb://USER-SERVICE
+              predicates:
+                - Path=/users/**
+            - id: startup-service
+              uri: lb://STARTUP-SERVICE
+              predicates:
+               - Path=/startups/**
+            - id: investment-service
+              uri: lb://INVESTMENT-SERVICE
+              predicates:
+                - Path=/investments/**
+            - id: team-service
+              uri: lb://TEAM-SERVICE
+              predicates:
+                - Path=/teams/**
+            - id: notification-service
+              uri: lb://NOTIFICATION-SERVICE
+              predicates:
+                - Path=/notifications/**
 
             
               
