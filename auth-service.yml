@@ -50,5 +50,3 @@ springdoc:
   #ADD THIS
   default-produces-media-type: application/json
 
-server:
-  forward-headers-strategy: framework
