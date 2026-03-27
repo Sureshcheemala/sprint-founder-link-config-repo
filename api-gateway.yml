@@ -3,6 +3,9 @@ spring:
     name: api-gateway
   cloud:
     gateway:
+      forwarded:
+        enabled: true
+
       globalcors:
         corsConfigurations:
           '[/**]':
@@ -106,6 +109,7 @@ spring:
 
 server:
   port: 8085
+  forward-headers-strategy: framework
 
 eureka:
   client:
